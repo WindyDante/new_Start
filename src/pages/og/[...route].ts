@@ -4,18 +4,12 @@ import { getPostsByLocale } from "~/utils"
 
 const posts = await getPostsByLocale(defaultLanguage)
 
-// Transform the collection into an object
 // @ts-ignore
 const pages = Object.fromEntries(posts.map(({ id, data }) => [id, { data }]))
 
 export const { getStaticPaths, GET } = OGImageRoute({
-  // The name of your dynamic route segment.
-  // In this case it’s `route`, because the file is named `[...route].ts`.
   param: "route",
-
-  // A collection of pages to generate images for.
   pages,
-  // For each page, this callback will be used to customize the OG image.
   getImageOptions: async (_, { data }: (typeof pages)[string]) => {
     return {
       title: data.title,
@@ -25,10 +19,12 @@ export const { getStaticPaths, GET } = OGImageRoute({
         [8, 3, 2],
       ],
       logo: {
-        path: "./public/avatar.jpg",
+        path: new URL("../../../public/avatar.jpg", import.meta.url),
         size: [100],
       },
-      fonts: ["./public/fonts/hwmc.otf"],
+      fonts: [
+        new URL("../../../public/fonts/hwmc.otf", import.meta.url),
+      ],
     }
   },
 })
