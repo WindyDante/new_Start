@@ -1,4 +1,5 @@
 import { OGImageRoute } from "astro-og-canvas"
+import path from "node:path"
 import { defaultLanguage } from "~/config"
 import { getPostsByLocale } from "~/utils"
 
@@ -7,6 +8,8 @@ const posts = await getPostsByLocale(defaultLanguage)
 // Transform the collection into an object
 // @ts-ignore
 const pages = Object.fromEntries(posts.map(({ id, data }) => [id, { data }]))
+
+const fromPublic = (p: string) => path.join(process.cwd(), "public", p)
 
 export const { getStaticPaths, GET } = OGImageRoute({
   // The name of your dynamic route segment.
@@ -25,10 +28,10 @@ export const { getStaticPaths, GET } = OGImageRoute({
         [8, 3, 2],
       ],
       logo: {
-        path: "./public/avatar.jpg",
+        path: fromPublic("avatar.jpg"),
         size: [100],
       },
-      fonts: ["./public/fonts/hwmc.otf"],
+      fonts: [fromPublic(path.join("fonts", "hwmc.otf"))],
     }
   },
 })
