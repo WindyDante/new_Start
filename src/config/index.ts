@@ -1,24 +1,19 @@
-import { Github, Twitter } from "lucide-react"
+import { Github } from "lucide-react"
 
-export const defaultLanguage: string = "en"
+export const defaultLanguage: string = "zh"
 
 export const common = {
-  domain: "https://astro-air-bento.deven.tw",
+  domain: "https://blog.1wind.cn",
   meta: {
-    favicon: "/avatar.jpg",
-    url: "https://blog.deven.tw",
+    favicon: "/avatar.png",
+    url: "https://blog.1wind.cn",
   },
   googleAnalyticsId: "",
   social: [
     {
-      icon: Twitter,
-      label: "X",
-      link: "https://x.com/",
-    },
-    {
       icon: Github,
       label: "GitHub",
-      link: "https://github.com/",
+      link: "https://github.com/WindyDante",
     },
   ],
   rss: true,
@@ -42,12 +37,12 @@ export const common = {
 
 export const zh = {
   ...common,
-  siteName: "霍洛",
+  siteName: "东风",
   meta: {
     ...common.meta,
-    title: "霍洛",
+    title: "东风",
     slogan: "一位探索者",
-    description: "藝術、科技、設計、旅行",
+    description: "科技",
   },
   navigation: {
     ...common.navigation,
@@ -55,18 +50,18 @@ export const zh = {
   },
   pageMeta: {
     archive: {
-      title: "歸檔",
-      description: "霍洛的所有文章",
+      title: "归档",
+      description: "东风的所有文章",
       ogImage: "/images/page-meta/zh/archive.png",
     },
     links: {
       title: "朋友們",
-      description: "霍洛的朋友們",
+      description: "东风的朋友們",
       ogImage: "/images/page-meta/zh/links.png",
     },
     about: {
-      title: "關於我",
-      description: "霍洛的自我介紹",
+      title: "关于我",
+      description: "东风的自我介紹",
       ogImage: "/images/page-meta/zh/about.png",
     },
   },
@@ -74,12 +69,12 @@ export const zh = {
 
 export const en = {
   ...common,
-  siteName: "Holo",
+  siteName: "EastWind",
   meta: {
     ...common.meta,
-    title: "Holo",
+    title: "EastWind",
     slogan: "An Explorer",
-    description: "Art, Technology, Design, Traveling",
+    description: "Technology",
   },
   navigation: {
     ...common.navigation,
@@ -88,17 +83,17 @@ export const en = {
   pageMeta: {
     archive: {
       title: "All Posts",
-      description: "Here are Holo's all posts",
+      description: "Here are EastWind all posts",
       ogImage: "/images/page-meta/en/archive.png",
     },
     links: {
       title: "My Friends",
-      description: "Here are Holo's friends",
+      description: "Here are EastWind friends",
       ogImage: "/images/page-meta/en/links.png",
     },
     about: {
       title: "About Me",
-      description: "Here is Holo's self-introduction",
+      description: "Here is EastWind self-introduction",
       ogImage: "/images/page-meta/en/about.png",
     },
   },
