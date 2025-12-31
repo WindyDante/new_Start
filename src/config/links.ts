@@ -53,4 +53,10 @@ export const links = [
     description: "无限进步.🎈",
     avatar: "https://log.vaaat.com/avatar.png",
   },
+  {
+    name: "Coldin04",
+    link: "https://cold04.com",
+    description: "电脑新手，多多关照",
+    avatar: "https://cold04.com/avatar.webp",
+  },
 ]
