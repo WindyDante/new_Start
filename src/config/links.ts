@@ -59,4 +59,10 @@ export const links = [
     description: "电脑新手，多多关照",
     avatar: "https://cold04.com/avatar.webp",
   },
+  {
+    name: "Shenley",
+    link: "https://shenley.cn",
+    description: "慢慢来，比较快",
+    avatar: "https://shenley.cn/avatar.png",
+  },
 ]
